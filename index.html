@@ -1,0 +1,270 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Carlos Alejandro Santiusti Gutiérrez</title>
+<meta name="description" content="Director of Data & Analytics | AI Strategist & Enterprise Architect">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Carlos Alejandro Santiusti Gutiérrez</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-bg: #f4f7f6;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .header-info h1 {
+            margin: 0;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-size: 26px;
+        }
+        .header-info h2 {
+            margin: 5px 0;
+            color: var(--accent-color);
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .contact-info {
+            text-align: right;
+            font-size: 14px;
+        }
+        .btn-download {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+        .btn-download:hover {
+            background-color: #2980b9;
+        }
+        section {
+            margin-bottom: 25px;
+        }
+        h3 {
+            color: var(--primary-color);
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .experience-item {
+            margin-bottom: 20px;
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+        .item-title {
+            color: var(--accent-color);
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        .tech-stack {
+            font-size: 13px;
+            color: #666;
+            margin-top: 5px;
+        }
+        ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media print {
+            .btn-download, .no-print {
+                display: none;
+            }
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <button class="btn-download" onclick="window.print()">Download as PDF</button>
+
+    <header>
+        <div class="header-info">
+            <h1>Carlos Alejandro Santiusti Gutiérrez</h1>
+            <h2>Director of Data & Analytics | AI Strategist & Enterprise Architect</h2>
+        </div>
+        <div class="contact-info">
+            csantiusti@gmail.com<br>
+            +57 311 555 2712<br>
+            Bogotá, Colombia
+        </div>
+    </header>
+
+    <section>
+        <h3>Executive Profile</h3>
+        <p>
+            Strategic Data Leader with over 15 years of experience architecting enterprise-grade data ecosystems and driving business transformation through AI innovation. 
+            Expert at leading migrations to cloud-based, ML-ready foundations (Azure/Snowflake) while establishing robust data governance frameworks. 
+            Proven track record in translating complex behavioral and financial datasets into executive-level strategies that optimize business performance and scalable innovation.
+        </p>
+    </section>
+
+    <section>
+        <h3>Technical Core</h3>
+        <div class="skills-grid">
+            <div>
+                <strong>Infrastructure & Strategy:</strong>
+                <ul>
+                    <li>Modern Data Warehouse Design (Azure/Snowflake)</li>
+                    <li>Master Data Management (MDM) Strategy</li>
+                    <li>ML-Ready Foundation & Data Lineage</li>
+                </ul>
+            </div>
+            <div>
+                <strong>Tools & Analytics:</strong>
+                <ul>
+                    <li>Python (LangChain, Analytics), SQL, R Studio</li>
+                    <li>Power BI (Certified), ETL (SSIS, Pipelines, n8n)</li>
+                    <li>Advanced ML (Random Forest, Cluster Analysis, PCA)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Professional Experience</h3>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <span>GPMF</span>
+                <span>June 2025 – Present</span>
+            </div>
+            <div class="item-title">BI Consultant & Data Architect</div>
+            <ul>
+                <li><strong>Financial Analytics Architecture:</strong> Designed analytical architecture for consolidating financial information (costs, purchase orders) to drive investment prioritization.</li>
+                <li><strong>Operational Automation:</strong> Implemented automation pilots using <strong>n8n</strong> and <strong>Python</strong> to extract data from unstructured documents into JSON-based Data Marts.</li>
+                <li><strong>Scalable Modeling:</strong> Built ETL flows and Power BI dashboards focused on financial control and land acquisition feasibility.</li>
+            </ul>
+            <div class="tech-stack">Environment: Python, n8n, SQL Server, Power BI Dataflows</div>
+        </div>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <span>AMARIS CONSULTING</span>
+                <span>Sept 2024 – Present</span>
+            </div>
+            <div class="item-title">Lead Data Governance & AI Architecture Strategy (Banco Unión)</div>
+            <ul>
+                <li><strong>Generative AI Leadership:</strong> Leading the bank's first generative AI pilot, enabling business plan creation via LLM-based context analysis.</li>
+                <li><strong>Data Governance:</strong> Designing a scalable framework integrating AI for metadata management, lineage, and automated quality control.</li>
+                <li><strong>Executive Advisory:</strong> Driving workshops for C-level executives on AI integration and Microsoft Copilot adoption strategies.</li>
+                <li><strong>MDM Architecture:</strong> Designed a Master Data Management strategy for suppliers, inventory, and sales across multiple sources.</li>
+            </ul>
+            <div class="tech-stack">Environment: Bizagi Modeler, Azure Purview, Python (LangChain)</div>
+        </div>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <span>EURIKA</span>
+                <span>July 2022 – Sept 2024</span>
+            </div>
+            <div class="item-title">Data Architect / DBA / Power BI Developer</div>
+            <ul>
+                <li>Managed the full lifecycle of BI projects in local and Azure ecosystems.</li>
+                <li>Executed complex database migrations between different engines and versions.</li>
+            </ul>
+            <div class="tech-stack">Environment: Azure, Power BI, SSIS, Pipelines</div>
+        </div>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <span>Civil Service National Commission (CNSC)</span>
+                <span>Aug 2021 – July 2022</span>
+            </div>
+            <div class="item-title">Data Engineer / Business Analyst Engineer</div>
+            <ul>
+                <li>Designed high-impact dashboards and reports for the High Commissioner and senior managers in public tenders.</li>
+                <li>Developed and managed end-to-end ETL processes and Data Warehouse architecture.</li>
+                <li>Formulated critical organizational KPIs and visualized performance through advanced dashboards.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <span>Economic Development Observatory</span>
+                <span>June 2018 – May 2023</span>
+            </div>
+            <div class="item-title">Data Analyst</div>
+            <ul>
+                <li>Applied predictive analytics (Random Forest, PCA) to uncover socioeconomic patterns in public data.</li>
+                <li>Managed ETL from APIs using Python and conducted advanced statistical analysis in R Studio.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h3>Education & Certifications</h3>
+        <ul>
+            <li><strong>Microsoft Certified:</strong> Power BI Data Analyst Associate (PL-300), 2023</li>
+            <li><strong>Postgraduate Specialist:</strong> Technology Management & Social Design, Universidad de los Andes, 2015</li>
+            <li><strong>Postgraduate Program:</strong> Technology to Create, Hanze University of Applied Sciences, Groningen, Netherlands, 2017</li>
+            <li><strong>Diploma:</strong> Data Analytics, Pontificia Universidad Javeriana, 2020</li>
+            <li><strong>Bachelor of Engineering:</strong> Systems Engineering (Major in Database Management), Universidad Distrital, 2014</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Languages</h3>
+        <p><strong>Spanish:</strong> Native | <strong>English:</strong> Proficiency</p>
+    </section>
+</div>
+
+</body>
+</html>
