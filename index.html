@@ -1,270 +1,598 @@
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - Carlos Alejandro Santiusti Gutiérrez</title>
-<meta name="description" content="Director of Data & Analytics | AI Strategist & Enterprise Architect">
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Carlos Alejandro Santiusti Gutiérrez</title>
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #3498db;
-            --text-color: #333;
-            --light-bg: #f4f7f6;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--light-bg);
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 40px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-        header {
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-        .header-info h1 {
-            margin: 0;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            font-size: 26px;
-        }
-        .header-info h2 {
-            margin: 5px 0;
-            color: var(--accent-color);
-            font-size: 18px;
-            font-weight: 400;
-        }
-        .contact-info {
-            text-align: right;
-            font-size: 14px;
-        }
-        .btn-download {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            margin-bottom: 20px;
-            transition: background 0.3s;
-        }
-        .btn-download:hover {
-            background-color: #2980b9;
-        }
-        section {
-            margin-bottom: 25px;
-        }
-        h3 {
-            color: var(--primary-color);
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
-            text-transform: uppercase;
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-        .experience-item {
-            margin-bottom: 20px;
-        }
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            color: var(--secondary-color);
-        }
-        .item-title {
-            color: var(--accent-color);
-            font-style: italic;
-            margin-bottom: 5px;
-        }
-        .tech-stack {
-            font-size: 13px;
-            color: #666;
-            margin-top: 5px;
-        }
-        ul {
-            margin: 5px 0;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        @media print {
-            .btn-download, .no-print {
-                display: none;
-            }
-            body {
-                background: white;
-                padding: 0;
-            }
-            .container {
-                box-shadow: none;
-                width: 100%;
-                max-width: 100%;
-                padding: 0;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carlos Alejandro Santiusti Gutiérrez | AI & Data for Social Impact</title>
+<meta name="description" content="Portfolio layout for Carlos Alejandro Santiusti Gutiérrez — AI & Data for Social Impact.">
+
+<style>
+:root{
+  --navy:#0E4F86;
+  --navy-deep:#083B67;
+  --blue:#10A9DF;
+  --cyan:#55D8E0;
+  --cyan-soft:#E9FAFC;
+  --aqua:#2CC7D7;
+  --ink:#17324D;
+  --muted:#60768A;
+  --paper:#FFFFFF;
+  --mist:#F4FAFC;
+  --line:#DDECF2;
+  --coral:#F6B7BB;
+  --peach:#FBE9E5;
+  --shadow:0 18px 50px rgba(8,59,103,.10);
+  --radius:24px;
+  --max:1180px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:var(--paper);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.65;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+
+/* ---------- Decorative wave language inspired by the business card ---------- */
+.wave-top,.wave-bottom{
+  position:absolute;
+  left:0;
+  width:100%;
+  pointer-events:none;
+  overflow:hidden;
+}
+.wave-top{top:0;height:120px}
+.wave-bottom{bottom:0;height:120px}
+.wave-top svg,.wave-bottom svg{width:100%;height:100%;display:block}
+
+.nav{
+  position:fixed;
+  z-index:20;
+  top:18px;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(var(--max),calc(100% - 32px));
+  padding:10px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  border:1px solid rgba(255,255,255,.75);
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(16px);
+  border-radius:999px;
+  box-shadow:0 10px 30px rgba(8,59,103,.10);
+}
+.brand{
+  display:flex;align-items:center;gap:10px;font-weight:800;color:var(--navy);
+  letter-spacing:-.02em;
+}
+.brand-mark{
+  width:34px;height:34px;border-radius:50%;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--navy),var(--blue));
+  color:#fff;font-weight:900;font-size:16px;
+}
+.nav-links{display:flex;gap:24px;align-items:center;font-size:14px;font-weight:650;color:var(--muted)}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta{
+  padding:9px 16px;border-radius:999px;background:var(--navy);color:#fff;
+  font-size:13px;font-weight:750;
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;
+  min-height:760px;
+  padding:150px 0 90px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 82% 22%,rgba(85,216,224,.18),transparent 28%),
+    linear-gradient(180deg,#F8FDFF 0%,#fff 75%);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center;
+  position:relative;z-index:2;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  color:var(--navy);font-weight:800;font-size:13px;
+  letter-spacing:.12em;text-transform:uppercase;
+  margin-bottom:18px;
+}
+.eyebrow:before{
+  content:"";width:34px;height:3px;border-radius:5px;background:var(--cyan);
+}
+h1{
+  margin:0;color:var(--navy-deep);
+  font-size:clamp(46px,6vw,78px);
+  line-height:.98;letter-spacing:-.055em;
+}
+.hero-title-accent{
+  display:block;
+  margin-top:14px;
+  color:var(--blue);
+  font-size:clamp(24px,3vw,38px);
+  line-height:1.12;letter-spacing:-.03em;
+}
+.hero-copy{
+  max-width:700px;margin:26px 0 30px;
+  font-size:18px;color:var(--muted);
+}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:46px;padding:0 20px;border-radius:999px;font-weight:800;font-size:14px;
+  transition:.2s ease;
+}
+.btn-primary{background:var(--navy);color:#fff;box-shadow:0 10px 24px rgba(14,79,134,.20)}
+.btn-primary:hover{transform:translateY(-2px);background:var(--navy-deep)}
+.btn-secondary{border:1px solid var(--line);background:#fff;color:var(--navy)}
+.btn-secondary:hover{border-color:var(--cyan);transform:translateY(-2px)}
+
+.hero-card{
+  position:relative;
+  min-height:420px;
+  border-radius:36px;
+  background:#fff;
+  border:1px solid rgba(16,169,223,.16);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.hero-card:before{
+  content:"";
+  position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 30% 30%,rgba(85,216,224,.25),transparent 22%),
+    radial-gradient(circle at 78% 70%,rgba(16,169,223,.13),transparent 30%);
+}
+.profile-orbit{
+  position:absolute;inset:48px;
+  border:1px dashed rgba(14,79,134,.18);border-radius:50%;
+}
+.profile-orbit:after{
+  content:"";position:absolute;inset:42px;border:1px solid rgba(85,216,224,.28);border-radius:50%;
+}
+.profile-core{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:190px;height:190px;border-radius:50%;
+  background:linear-gradient(145deg,#fff,#E9FAFC);
+  border:10px solid #fff;
+  box-shadow:0 20px 50px rgba(14,79,134,.15);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;
+}
+.profile-core .initials{font-size:52px;font-weight:900;color:var(--navy);letter-spacing:-.06em}
+.profile-core small{color:var(--blue);font-weight:800;letter-spacing:.08em}
+.float-tag{
+  position:absolute;padding:10px 14px;border-radius:14px;background:#fff;
+  border:1px solid var(--line);box-shadow:0 12px 28px rgba(8,59,103,.10);
+  font-size:12px;font-weight:800;color:var(--navy);
+}
+.tag-a{top:55px;left:30px}.tag-b{top:112px;right:22px}.tag-c{bottom:82px;left:18px}.tag-d{bottom:36px;right:36px}
+
+.section{padding:105px 0}
+.section-alt{background:var(--mist)}
+.section-head{max-width:720px;margin-bottom:48px}
+.kicker{color:var(--blue);font-size:13px;font-weight:850;letter-spacing:.12em;text-transform:uppercase}
+.section h2{
+  margin:9px 0 12px;color:var(--navy-deep);
+  font-size:clamp(32px,4vw,48px);line-height:1.08;letter-spacing:-.045em;
+}
+.section-intro{color:var(--muted);font-size:17px;max-width:720px}
+
+/* ---------- Capability cards ---------- */
+.capabilities{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+}
+.cap-card{
+  position:relative;padding:28px;border-radius:var(--radius);
+  background:#fff;border:1px solid var(--line);box-shadow:0 8px 30px rgba(8,59,103,.05);
+  overflow:hidden;
+}
+.cap-card:after{
+  content:"";position:absolute;right:-35px;top:-35px;width:105px;height:105px;border-radius:50%;
+  background:var(--cyan-soft);
+}
+.cap-icon{
+  width:48px;height:48px;border-radius:15px;display:grid;place-items:center;
+  background:var(--cyan-soft);color:var(--navy);font-size:22px;font-weight:900;
+  margin-bottom:20px;position:relative;z-index:1;
+}
+.cap-card h3{margin:0 0 8px;font-size:19px;color:var(--navy-deep)}
+.cap-card p{margin:0;color:var(--muted);font-size:14px}
+
+/* ---------- Selected work ---------- */
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.work-card{
+  border-radius:var(--radius);overflow:hidden;background:#fff;border:1px solid var(--line);
+  box-shadow:0 10px 35px rgba(8,59,103,.06);
+}
+.work-visual{
+  height:170px;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,var(--navy-deep),var(--blue));
+}
+.work-visual:before,.work-visual:after{
+  content:"";position:absolute;border-radius:50%;
+  border:1px solid rgba(255,255,255,.28);
+}
+.work-visual:before{width:230px;height:230px;left:-60px;top:-70px}
+.work-visual:after{width:170px;height:170px;right:-40px;bottom:-70px}
+.work-label{
+  position:absolute;left:20px;bottom:18px;color:#fff;font-weight:850;
+  font-size:13px;letter-spacing:.08em;text-transform:uppercase;
+}
+.work-body{padding:24px}
+.work-body h3{margin:0 0 9px;color:var(--navy-deep);font-size:21px}
+.work-body p{margin:0 0 17px;color:var(--muted);font-size:14px}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{
+  padding:5px 9px;border-radius:999px;background:var(--cyan-soft);
+  color:var(--navy);font-size:11px;font-weight:800;
+}
+
+
+/* Education */
+.education-list{position:relative;max-width:980px;margin-top:12px}.education-list:before{content:"";position:absolute;left:166px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--cyan),var(--blue),var(--line))}.education-item{position:relative;display:grid;grid-template-columns:140px 52px 1fr;align-items:start;min-height:108px}.education-year{padding-top:5px;color:var(--blue);font-size:18px;font-weight:900;text-align:right;padding-right:28px}.education-marker{position:relative;height:100%;display:flex;justify-content:center}.education-marker span{position:relative;z-index:2;width:16px;height:16px;margin-top:7px;border-radius:50%;background:#fff;border:4px solid var(--blue);box-shadow:0 0 0 5px rgba(85,216,224,.16)}.education-content{padding:0 0 34px 22px}.education-type{margin-bottom:4px;color:var(--muted);font-size:11px;font-weight:850;letter-spacing:.10em;text-transform:uppercase}.education-content h3{margin:0 0 5px;color:var(--navy-deep);font-size:19px;line-height:1.25}.education-content p{margin:0;color:var(--muted);font-size:14px}.education-featured .education-content{padding:16px 24px 28px;margin-top:-8px;border:1px solid rgba(16,169,223,.18);border-radius:18px;background:linear-gradient(135deg,#fff,#F4FCFE);box-shadow:0 8px 28px rgba(8,59,103,.06)}.education-featured .education-year{padding-top:20px}.education-featured .education-marker span{margin-top:22px;width:19px;height:19px;border-width:5px}
+
+/* ---------- Experience timeline ---------- */
+.timeline{position:relative;max-width:920px}
+.timeline:before{
+  content:"";position:absolute;left:10px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--cyan),var(--blue),var(--line));
+}
+.timeline-item{position:relative;padding-left:42px;margin-bottom:34px}
+.timeline-dot{
+  position:absolute;left:2px;top:7px;width:18px;height:18px;border-radius:50%;
+  background:#fff;border:4px solid var(--blue);box-shadow:0 0 0 5px rgba(85,216,224,.16);
+}
+.timeline-top{display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.timeline-company{font-weight:850;color:var(--navy-deep);font-size:19px}
+.timeline-date{color:var(--blue);font-size:12px;font-weight:800;white-space:nowrap}
+.timeline-role{font-weight:750;color:var(--muted);margin:2px 0 7px}
+.timeline-item p{margin:0;color:var(--muted);font-size:14px}
+
+/* ---------- Philosophy strip ---------- */
+.philosophy{
+  position:relative;overflow:hidden;background:var(--navy-deep);color:#fff;padding:100px 0;
+}
+.philosophy .section-head{margin-bottom:0;position:relative;z-index:2}
+.philosophy h2{color:#fff}
+.philosophy .section-intro{color:rgba(255,255,255,.76)}
+.philosophy-orb{
+  position:absolute;width:460px;height:460px;border-radius:50%;right:-100px;top:-160px;
+  border:1px solid rgba(85,216,224,.32);box-shadow:0 0 0 70px rgba(85,216,224,.05),0 0 0 140px rgba(85,216,224,.025);
+}
+
+/* ---------- Contact ---------- */
+.contact{
+  position:relative;overflow:hidden;padding:100px 0;
+  background:linear-gradient(135deg,#F9FEFF,#E9FAFC);
+}
+.contact-box{
+  display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;
+}
+.contact-list{display:grid;gap:12px;margin-top:26px}
+.contact-row{
+  display:flex;align-items:center;gap:13px;color:var(--navy);font-weight:700;
+}
+.contact-icon{
+  width:38px;height:38px;border-radius:50%;background:#fff;border:1px solid var(--line);
+  display:grid;place-items:center;color:var(--blue);font-size:15px;
+}
+.contact-card{
+  background:#fff;border:1px solid var(--line);border-radius:30px;padding:34px;
+  box-shadow:var(--shadow);
+}
+.contact-card h3{margin:0 0 8px;color:var(--navy-deep);font-size:24px}
+.contact-card p{margin:0 0 22px;color:var(--muted);font-size:14px}
+
+/* ---------- Footer ---------- */
+footer{
+  position:relative;overflow:hidden;background:#fff;padding:38px 0 50px;border-top:1px solid var(--line);
+}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}
+.footer-note{font-size:12px;color:var(--muted)}
+.footer-brand{font-weight:900;color:var(--navy)}
+.footer-accent{color:var(--blue)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:980px){
+  .hero-grid,.contact-box{grid-template-columns:1fr}
+  .hero{padding-top:130px}
+  .hero-card{min-height:360px}
+  .capabilities{grid-template-columns:repeat(2,1fr)}
+  .work-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:680px){.education-list:before{left:8px}.education-item{grid-template-columns:34px 1fr;min-height:auto}.education-year{grid-column:2;grid-row:1;text-align:left;padding:0 0 3px;font-size:15px}.education-marker{grid-column:1;grid-row:1 / span 2;justify-content:flex-start}.education-marker span{margin-top:4px}.education-content{grid-column:2;grid-row:2;padding:0 0 30px}.education-featured .education-content{padding:14px 16px 18px;margin-top:3px;margin-bottom:18px}.education-featured .education-year{padding-top:0}.education-featured .education-marker span{margin-top:4px}
+  .container{width:min(var(--max),calc(100% - 26px))}
+  .nav-links{display:none}
+  .nav{justify-content:space-between}
+  .hero{min-height:auto;padding:120px 0 70px}
+  .hero-grid{gap:35px}
+  .hero-copy{font-size:16px}
+  .profile-orbit{inset:28px}
+  .profile-core{width:150px;height:150px}
+  .profile-core .initials{font-size:40px}
+  .float-tag{font-size:10px;padding:8px 10px}
+  .tag-a{top:32px;left:12px}.tag-b{top:68px;right:10px}.tag-c{bottom:55px;left:8px}.tag-d{bottom:20px;right:14px}
+  .section{padding:75px 0}
+  .capabilities,.work-grid{grid-template-columns:1fr}
+  .timeline-top{display:block}
+  .timeline-date{display:block;margin-top:3px}
+  .footer-inner{display:block}
+  .footer-note{margin-top:10px}
+}
+
+/* Developer handoff note */
+.handoff{
+  margin:0;
+  padding:10px 14px;
+  background:#072E4F;
+  color:#DFFBFD;
+  font-size:11px;
+  text-align:center;
+  letter-spacing:.02em;
+}
+</style>
 </head>
+
 <body>
 
-<div class="container">
-    <button class="btn-download" onclick="window.print()">Download as PDF</button>
+<div class="handoff">UI LAYOUT • Visual direction inspired by the supplied business card • Responsive single-page portfolio</div>
 
-    <header>
-        <div class="header-info">
-            <h1>Carlos Alejandro Santiusti Gutiérrez</h1>
-            <h2>Director of Data & Analytics | AI Strategist & Enterprise Architect</h2>
+<nav class="nav">
+  <a class="brand" href="#top">
+    <span class="brand-mark">CS</span>
+    <span>Carlos Santiusti</span>
+  </a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#work">Selected work</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+  </div>
+  <a class="nav-cta" href="#contact">Let's connect</a>
+</nav>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wave-top">
+    <svg viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,0 H1440 V62 C1260,4 1160,12 1030,65 C875,128 760,116 620,58 C470,-4 360,10 235,68 C125,118 62,105 0,72 Z" fill="#55D8E0" opacity=".22"/>
+      <path d="M0,0 H1440 V40 C1260,-6 1160,3 1030,48 C875,104 760,94 620,42 C470,-12 360,-1 235,54 C125,100 62,92 0,61 Z" fill="#10A9DF" opacity=".9"/>
+      <path d="M0,0 H1440 V18 C1260,-12 1160,-5 1030,30 C875,74 760,68 620,26 C470,-18 360,-9 235,38 C125,74 62,70 0,46 Z" fill="#2CC7D7"/>
+    </svg>
+  </div>
+
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">AI & Data for Social Impact</div>
+      <h1>Carlos Alejandro<br>Santiusti Gutiérrez</h1>
+      <span class="hero-title-accent">AI Strategist · Data Leader · Enterprise Architect</span>
+      <p class="hero-copy">
+        Strategic Data Leader with over 15 years of experience architecting enterprise-grade data ecosystems and driving business transformation through AI innovation.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#work">Explore my work →</a>
+        <a class="btn btn-secondary" href="#contact">Contact me</a>
+      </div>
+    </div>
+
+    <div class="hero-card" aria-label="Visual identity panel">
+      <div class="profile-orbit"></div>
+      <div class="float-tag tag-a">DATA STRATEGY</div>
+      <div class="float-tag tag-b">AI GOVERNANCE</div>
+      <div class="float-tag tag-c">DATA ARCHITECTURE</div>
+      <div class="float-tag tag-d">SOCIAL IMPACT</div>
+      <div class="profile-core">
+        <div class="initials">CS</div>
+        <small>DATA × AI</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="wave-bottom">
+    <svg viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,92 C145,140 220,127 365,92 C515,56 600,60 720,106 C865,161 1010,146 1155,89 C1275,42 1350,52 1440,83 V150 H0 Z" fill="#10A9DF"/>
+      <path d="M0,115 C145,157 220,149 365,111 C515,77 600,80 720,124 C865,175 1010,160 1155,108 C1275,64 1350,71 1440,102 V150 H0 Z" fill="#55D8E0"/>
+      <path d="M0,133 C145,169 220,165 365,132 C515,102 600,105 720,139 C865,181 1010,172 1155,128 C1275,91 1350,95 1440,120 V150 H0 Z" fill="#E9FAFC"/>
+    </svg>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">01 · About</div>
+      <h2>From data complexity to meaningful action.</h2>
+      <p class="section-intro">
+        A portfolio architecture that puts strategy, people, governance and technology in the same conversation, rather than presenting a conventional CV as a list of tools.
+      </p>
+    </div>
+
+    <div class="capabilities" id="capabilities">
+      <article class="cap-card">
+        <div class="cap-icon">◎</div>
+        <h3>Data Strategy</h3>
+        <p>Enterprise data ecosystems, transformation roadmaps and business-oriented data capabilities.</p>
+      </article>
+      <article class="cap-card">
+        <div class="cap-icon">⌘</div>
+        <h3>AI Strategy</h3>
+        <p>AI innovation, use-case discovery and translation between business value and technical execution.</p>
+      </article>
+      <article class="cap-card">
+        <div class="cap-icon">◇</div>
+        <h3>Governance</h3>
+        <p>Data governance, lineage, quality, metadata and responsible adoption of AI capabilities.</p>
+      </article>
+      <article class="cap-card">
+        <div class="cap-icon">↗</div>
+        <h3>Architecture</h3>
+        <p>Modern data platforms, analytics foundations, ETL and cloud-oriented architectures.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="work">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">02 · Selected work</div>
+      <h2>Cases before credentials.</h2>
+      <p class="section-intro">
+        The proposed redesign moves the portfolio from “what I know” toward “how I create value”, while retaining the professional experience underneath.
+      </p>
+    </div>
+
+    <div class="work-grid">
+      <article class="work-card">
+        <div class="work-visual"><div class="work-label">Financial analytics</div></div>
+        <div class="work-body">
+          <h3>GPMF</h3>
+          <p>Analytical architecture, financial information consolidation, automation pilots and Power BI dashboards for financial control and land acquisition feasibility.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">n8n</span><span class="tag">SQL Server</span><span class="tag">Power BI</span></div>
         </div>
-        <div class="contact-info">
-            csantiusti@gmail.com<br>
-            +57 311 555 2712<br>
-            Bogotá, Colombia
+      </article>
+
+      <article class="work-card">
+        <div class="work-visual"><div class="work-label">AI & data governance</div></div>
+        <div class="work-body">
+          <h3>Banco Unión</h3>
+          <p>Generative AI pilot, data governance strategy, executive AI workshops and MDM architecture across multiple sources.</p>
+          <div class="tags"><span class="tag">AI Strategy</span><span class="tag">Governance</span><span class="tag">MDM</span><span class="tag">Azure</span></div>
         </div>
-    </header>
+      </article>
 
-    <section>
-        <h3>Executive Profile</h3>
-        <p>
-            Strategic Data Leader with over 15 years of experience architecting enterprise-grade data ecosystems and driving business transformation through AI innovation. 
-            Expert at leading migrations to cloud-based, ML-ready foundations (Azure/Snowflake) while establishing robust data governance frameworks. 
-            Proven track record in translating complex behavioral and financial datasets into executive-level strategies that optimize business performance and scalable innovation.
-        </p>
-    </section>
-
-    <section>
-        <h3>Technical Core</h3>
-        <div class="skills-grid">
-            <div>
-                <strong>Infrastructure & Strategy:</strong>
-                <ul>
-                    <li>Modern Data Warehouse Design (Azure/Snowflake)</li>
-                    <li>Master Data Management (MDM) Strategy</li>
-                    <li>ML-Ready Foundation & Data Lineage</li>
-                </ul>
-            </div>
-            <div>
-                <strong>Tools & Analytics:</strong>
-                <ul>
-                    <li>Python (LangChain, Analytics), SQL, R Studio</li>
-                    <li>Power BI (Certified), ETL (SSIS, Pipelines, n8n)</li>
-                    <li>Advanced ML (Random Forest, Cluster Analysis, PCA)</li>
-                </ul>
-            </div>
+      <article class="work-card">
+        <div class="work-visual"><div class="work-label">BI & data architecture</div></div>
+        <div class="work-body">
+          <h3>EURIKA</h3>
+          <p>Full lifecycle BI projects, database migrations and analytics solutions across local and Azure ecosystems.</p>
+          <div class="tags"><span class="tag">Azure</span><span class="tag">Power BI</span><span class="tag">SSIS</span><span class="tag">Pipelines</span></div>
         </div>
-    </section>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <section>
-        <h3>Professional Experience</h3>
 
-        <div class="experience-item">
-            <div class="item-header">
-                <span>GPMF</span>
-                <span>June 2025 – Present</span>
-            </div>
-            <div class="item-title">BI Consultant & Data Architect</div>
-            <ul>
-                <li><strong>Financial Analytics Architecture:</strong> Designed analytical architecture for consolidating financial information (costs, purchase orders) to drive investment prioritization.</li>
-                <li><strong>Operational Automation:</strong> Implemented automation pilots using <strong>n8n</strong> and <strong>Python</strong> to extract data from unstructured documents into JSON-based Data Marts.</li>
-                <li><strong>Scalable Modeling:</strong> Built ETL flows and Power BI dashboards focused on financial control and land acquisition feasibility.</li>
-            </ul>
-            <div class="tech-stack">Environment: Python, n8n, SQL Server, Power BI Dataflows</div>
-        </div>
+<section class="section" id="education">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">03 · Education & certifications</div>
+      <h2>A foundation in technology, data and social design.</h2>
+      <p class="section-intro">Academic training and professional certification supporting the intersection of systems engineering, data analytics, technology management and AI.</p>
+    </div>
+    <div class="education-list">
+      <article class="education-item education-featured"><div class="education-year">2026</div><div class="education-marker"><span></span></div><div class="education-content"><div class="education-type">Professional learning · AI</div><h3>Applied Claude for Business Analyst</h3><p>Agentic Dream</p></div></article>
+      <article class="education-item"><div class="education-year">2023</div><div class="education-marker"><span></span></div><div class="education-content"><div class="education-type">Microsoft certification</div><h3>Microsoft Certified: Power BI Data Analyst Associate (PL-300)</h3><p>Microsoft</p></div></article>
+      <article class="education-item"><div class="education-year">2020</div><div class="education-marker"><span></span></div><div class="education-content"><div class="education-type">Diploma</div><h3>Data Analytics</h3><p>Pontificia Universidad Javeriana</p></div></article>
+      <article class="education-item"><div class="education-year">2017</div><div class="education-marker"><span></span></div><div class="education-content"><div class="education-type">Postgraduate program</div><h3>Technology to Create</h3><p>Hanze University of Applied Sciences · Groningen, Netherlands</p></div></article>
+      <article class="education-item"><div class="education-year">2015</div><div class="education-marker"><span></span></div><div class="education-content"><div class="education-type">Postgraduate specialist</div><h3>Technology Management & Social Design</h3><p>Universidad de los Andes</p></div></article>
+      <article class="education-item"><div class="education-year">2014</div><div class="education-marker"><span></span></div><div class="education-content"><div class="education-type">Bachelor of Engineering</div><h3>Systems Engineering · Major in Database Management</h3><p>Universidad Distrital</p></div></article>
+    </div>
+  </div>
+</section>
 
-        <div class="experience-item">
-            <div class="item-header">
-                <span>AMARIS CONSULTING</span>
-                <span>Sept 2024 – Present</span>
-            </div>
-            <div class="item-title">Lead Data Governance & AI Architecture Strategy (Banco Unión)</div>
-            <ul>
-                <li><strong>Generative AI Leadership:</strong> Leading the bank's first generative AI pilot, enabling business plan creation via LLM-based context analysis.</li>
-                <li><strong>Data Governance:</strong> Designing a scalable framework integrating AI for metadata management, lineage, and automated quality control.</li>
-                <li><strong>Executive Advisory:</strong> Driving workshops for C-level executives on AI integration and Microsoft Copilot adoption strategies.</li>
-                <li><strong>MDM Architecture:</strong> Designed a Master Data Management strategy for suppliers, inventory, and sales across multiple sources.</li>
-            </ul>
-            <div class="tech-stack">Environment: Bizagi Modeler, Azure Purview, Python (LangChain)</div>
-        </div>
+<section class="section" id="experience">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">04 · Experience</div>
+      <h2>A career built across data, technology and transformation.</h2>
+      <p class="section-intro">The timeline keeps the detail available without letting the CV dominate the first impression.</p>
+    </div>
 
-        <div class="experience-item">
-            <div class="item-header">
-                <span>EURIKA</span>
-                <span>July 2022 – Sept 2024</span>
-            </div>
-            <div class="item-title">Data Architect / DBA / Power BI Developer</div>
-            <ul>
-                <li>Managed the full lifecycle of BI projects in local and Azure ecosystems.</li>
-                <li>Executed complex database migrations between different engines and versions.</li>
-            </ul>
-            <div class="tech-stack">Environment: Azure, Power BI, SSIS, Pipelines</div>
-        </div>
+    <div class="timeline">
+      <article class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-top"><span class="timeline-company">GPMF</span><span class="timeline-date">June 2025 – Present</span></div>
+        <div class="timeline-role">BI Consultant & Data Architect</div>
+        <p>Financial analytics architecture, operational automation, scalable modeling and Power BI dashboards.</p>
+      </article>
 
-        <div class="experience-item">
-            <div class="item-header">
-                <span>Civil Service National Commission (CNSC)</span>
-                <span>Aug 2021 – July 2022</span>
-            </div>
-            <div class="item-title">Data Engineer / Business Analyst Engineer</div>
-            <ul>
-                <li>Designed high-impact dashboards and reports for the High Commissioner and senior managers in public tenders.</li>
-                <li>Developed and managed end-to-end ETL processes and Data Warehouse architecture.</li>
-                <li>Formulated critical organizational KPIs and visualized performance through advanced dashboards.</li>
-            </ul>
-        </div>
+      <article class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-top"><span class="timeline-company">AMARIS CONSULTING</span><span class="timeline-date">Sept 2024 – Present</span></div>
+        <div class="timeline-role">Lead Data Governance & AI Architecture Strategy · Banco Unión</div>
+        <p>Generative AI pilot, data governance, executive advisory and MDM architecture.</p>
+      </article>
 
-        <div class="experience-item">
-            <div class="item-header">
-                <span>Economic Development Observatory</span>
-                <span>June 2018 – May 2023</span>
-            </div>
-            <div class="item-title">Data Analyst</div>
-            <ul>
-                <li>Applied predictive analytics (Random Forest, PCA) to uncover socioeconomic patterns in public data.</li>
-                <li>Managed ETL from APIs using Python and conducted advanced statistical analysis in R Studio.</li>
-            </ul>
-        </div>
-    </section>
+      <article class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-top"><span class="timeline-company">EURIKA</span><span class="timeline-date">July 2022 – Sept 2024</span></div>
+        <div class="timeline-role">Data Architect / DBA / Power BI Developer</div>
+        <p>BI project lifecycle management and complex database migrations across local and Azure ecosystems.</p>
+      </article>
 
-    <section>
-        <h3>Education & Certifications</h3>
-        <ul>
-            <li><strong>Microsoft Certified:</strong> Power BI Data Analyst Associate (PL-300), 2023</li>
-            <li><strong>Postgraduate Specialist:</strong> Technology Management & Social Design, Universidad de los Andes, 2015</li>
-            <li><strong>Postgraduate Program:</strong> Technology to Create, Hanze University of Applied Sciences, Groningen, Netherlands, 2017</li>
-            <li><strong>Diploma:</strong> Data Analytics, Pontificia Universidad Javeriana, 2020</li>
-            <li><strong>Bachelor of Engineering:</strong> Systems Engineering (Major in Database Management), Universidad Distrital, 2014</li>
-        </ul>
-    </section>
+      <article class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-top"><span class="timeline-company">Civil Service National Commission (CNSC)</span><span class="timeline-date">Aug 2021 – July 2022</span></div>
+        <div class="timeline-role">Data Engineer / Business Analyst Engineer</div>
+        <p>Dashboards, reports, ETL, Data Warehouse architecture and organizational KPIs.</p>
+      </article>
 
-    <section>
-        <h3>Languages</h3>
-        <p><strong>Spanish:</strong> Native | <strong>English:</strong> Proficiency</p>
-    </section>
-</div>
+      <article class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-top"><span class="timeline-company">Economic Development Observatory</span><span class="timeline-date">June 2018 – May 2023</span></div>
+        <div class="timeline-role">Data Analyst</div>
+        <p>Predictive analytics, API-based ETL and advanced statistical analysis in public data.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="philosophy">
+  <div class="philosophy-orb"></div>
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">05 · Design principle</div>
+      <h2>Technology with context. Data with purpose.</h2>
+      <p class="section-intro">
+        The visual language intentionally combines the precision of technology with the organic forms present in the supplied identity: waves, movement, connection and social impact.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-box">
+    <div>
+      <div class="kicker">06 · Contact</div>
+      <h2>Let's build what comes next.</h2>
+      <p class="section-intro">The contact area follows the business-card hierarchy: name, purpose, direct channels and a clear invitation to connect.</p>
+      <div class="contact-list">
+        <a class="contact-row" href="mailto:csantiusti@gmail.com"><span class="contact-icon">✉</span>csantiusti@gmail.com</a>
+        <a class="contact-row" href="tel:+573115552712"><span class="contact-icon">⌕</span>+57 311 555 2712</a>
+        <a class="contact-row" href="https://casantiustig.github.io/peace-by-engineering/" target="_blank"><span class="contact-icon">↗</span>casantiustig.github.io/peace-by-engineering/</a>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <h3>Download the professional profile</h3>
+      <p>Keep the detailed CV available as a secondary action, while the website remains focused on narrative, selected work and contact.</p>
+      <a class="btn btn-primary" href="#" onclick="window.print();return false;">Print / save as PDF →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">Carlos Santiusti <span class="footer-accent">· AI & Data</span></div>
+    <div class="footer-note">Proposed UX/UI direction · Responsive portfolio layout</div>
+  </div>
+</footer>
 
 </body>
 </html>
